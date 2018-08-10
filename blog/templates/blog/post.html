@@ -1,0 +1,14 @@
+
+{% extends  "base.html" %}
+{% block content %}
+   <form action="/blog/create">
+                {%  csrf_token %}
+            <label class="form-group" for="title">Title: </label>
+            <input class="form-control form-control-sm" type="text" name="title" required placeholder="Input Title"><br>
+            <label class="form-group" for="price">Body: </label>
+            <textarea name="body" class="form-control form-control-sm" required placeholder="Input Body"></textarea><br>
+            <label class="form-group" for="price">Tag: </label>
+            <input class="form-control form-control-sm" type="text" name="tag" required placeholder="Input Tag ex: local,"><br>
+            <input class="btn btn-success" type="submit" value="Simpan">
+        </form>
+{% endblock content %}
